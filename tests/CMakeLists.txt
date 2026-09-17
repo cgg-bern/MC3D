@@ -9,7 +9,7 @@ if (NOT TARGET gtest_main)
 endif()
 
 set(MC3D_TESTUTILS_LIB "mc3dtestutils")
-add_library(${MC3D_TESTUTILS_LIB} STATIC TestUtils.cpp)
+add_library(${MC3D_TESTUTILS_LIB} TestUtils.cpp)
 target_link_libraries(${MC3D_TESTUTILS_LIB} PRIVATE PUBLIC gtest gmock MC3D::MC3D)
 target_compile_definitions(${MC3D_TESTUTILS_LIB} PRIVATE "-DTEST_RESOURCES_PATH=\"${PROJECT_SOURCE_DIR}/tests/resources/\"")
 set_target_properties(${MC3D_TESTUTILS_LIB} PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
